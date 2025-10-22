@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { formatPrice } from "@/lib/utils";
-import { ShoppingCart, Package } from "lucide-react";
+import { Package } from "lucide-react";
 
 export default function ProductCard({ product }) {
   const inStock = product.stock > 0;

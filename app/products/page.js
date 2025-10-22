@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
 import { productsAPI, categoriesAPI } from "@/lib/api";
-import { Search, Filter } from "lucide-react";
+import { Search } from "lucide-react";
 
 export default function ProductsPage() {
   const [products, setProducts] = useState([]);

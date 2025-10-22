@@ -8,13 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { productsAPI } from "@/lib/api";
 import { formatPrice } from "@/lib/utils";
-import {
-  Package,
-  ShoppingCart,
-  ArrowLeft,
-  CheckCircle,
-  XCircle,
-} from "lucide-react";
+import { ShoppingCart, ArrowLeft, CheckCircle, XCircle } from "lucide-react";
 
 export default function ProductDetailPage() {
   const params = useParams();
