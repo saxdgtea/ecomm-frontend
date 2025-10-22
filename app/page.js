@@ -14,6 +14,8 @@ import {
   CreditCard,
 } from "lucide-react";
 
+console.log("API URL:", process.env.NEXT_PUBLIC_API_URL);
+
 export default function HomePage() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
