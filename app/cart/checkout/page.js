@@ -302,7 +302,7 @@ export default function CheckoutPage() {
                 </button>
 
                 <p className="text-xs text-gray-500 text-center mt-4">
-                  You'll be redirected to WhatsApp to complete your order
+                  You will be redirected to WhatsApp to complete your order
                 </p>
 
                 {/* Info */}

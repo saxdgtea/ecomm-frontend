@@ -7,22 +7,16 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { productsAPI } from "@/lib/api";
-import { addToCart } from "@/lib/cart";
+//import { addToCart } from "@/lib/cart";
 import { formatPrice } from "@/lib/utils";
-import {
-  Package,
-  ShoppingCart,
-  ArrowLeft,
-  CheckCircle,
-  XCircle,
-} from "lucide-react";
+import { ShoppingCart, ArrowLeft, CheckCircle, XCircle } from "lucide-react";
 
 export default function ProductDetailPage() {
   const params = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [quantity, setQuantity] = useState(1);
-  const [addedToCart, setAddedToCart] = useState(false);
+  //const [addedToCart, setAddedToCart] = useState(false);
 
   useEffect(() => {
     if (params.id) {
