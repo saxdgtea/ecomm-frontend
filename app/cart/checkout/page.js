@@ -93,7 +93,7 @@ export default function CheckoutPage() {
     }
 
     // Generate WhatsApp URL
-    const phoneNumber = "1234567890"; // Replace with your business WhatsApp number
+    const phoneNumber = "254114087028"; // Replace with your business WhatsApp number
     const message = generateWhatsAppMessage();
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
 
