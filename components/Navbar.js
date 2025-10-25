@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ShoppingBag, User, LogOut, ShoppingCart } from "lucide-react";
+import { ShoppingBag, User, LogOut } from "lucide-react";
 import { getUser, removeToken, removeUser } from "@/lib/api";
-import { getCartItemCount } from "@/lib/cart";
+//import { getCartItemCount } from "@/lib/cart";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {

@@ -3,28 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { formatPrice } from "@/lib/utils";
-import { addToCart } from "@/lib/cart";
-import { ShoppingCart, Package, Check } from "lucide-react";
-import { useState } from "react";
+import { Package } from "lucide-react";
 
 export default function ProductCard({ product }) {
-  const [added, setAdded] = useState(false);
   const inStock = product.stock > 0;
-
-  const handleAddToCart = (e) => {
-    e.preventDefault(); // Prevent navigation to product detail
-
-    if (!inStock) return;
-
-    addToCart(product, 1);
-    setAdded(true);
-
-    // Trigger cart update event
-    window.dispatchEvent(new Event("cartUpdated"));
-
-    // Reset after 2 seconds
-    setTimeout(() => setAdded(false), 2000);
-  };
 
   return (
     <Link href={`/products/${product._id}`}>
