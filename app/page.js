@@ -24,6 +24,8 @@ export default function HomePage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        console.log("API_URL:", process.env.NEXT_PUBLIC_API_URL);
+
         const [productsRes, categoriesRes] = await Promise.all([
           productsAPI.getAll(),
           categoriesAPI.getAll(),

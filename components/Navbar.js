@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ShoppingBag, User, LogOut } from "lucide-react";
+import { ShoppingBag, User, LogOut, ShoppingCart } from "lucide-react";
 import { getUser, removeToken, removeUser } from "@/lib/api";
+import { getCartItemCount } from "@/lib/cart";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
@@ -37,7 +38,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
-              className={`text-lg font-medium transition-colors ${
+              className={`text-sm font-medium transition-colors ${
                 isActive("/")
                   ? "text-primary-600"
                   : "text-gray-700 hover:text-primary-600"
@@ -47,7 +48,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/products"
-              className={`text-lg font-medium transition-colors ${
+              className={`text-sm font-medium transition-colors ${
                 isActive("/products")
                   ? "text-primary-600"
                   : "text-gray-700 hover:text-primary-600"
@@ -57,7 +58,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/categories"
-              className={`text-lg font-medium transition-colors ${
+              className={`text-sm font-medium transition-colors ${
                 isActive("/categories")
                   ? "text-primary-600"
                   : "text-gray-700 hover:text-primary-600"
